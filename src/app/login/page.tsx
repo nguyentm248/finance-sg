@@ -139,7 +139,7 @@ export default function LoginPage() {
         {/* Footer */}
         <div className="text-center mt-8 text-slate-600 text-[12px] font-bold uppercase tracking-[0.2em] leading-loose opacity-60">
           <p>© 2026 Mắt Kính Sài Gòn</p>
-          <p className="text-[14px] font-black text-indigo-500/50 italic underline decoration-indigo-500/20 underline-offset-4">Quản lý tiền không thâm hụt :))p</p>
+          <p className="text-[14px] font-black text-indigo-500/50 italic underline decoration-indigo-500/20 underline-offset-4">Quản lý tiền không thâm hụt :))</p>
         </div>
       </div>
 
