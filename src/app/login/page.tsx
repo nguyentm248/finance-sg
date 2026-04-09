@@ -70,7 +70,7 @@ export default function LoginPage() {
             
             <div className="px-3 py-1 bg-white/5 rounded-full border border-white/10 flex items-center gap-2">
               <Sparkles size={10} className="text-yellow-500" />
-              <span className="text-slate-400 font-bold text-[10px] uppercase tracking-[0.3em]">Ví Quản Lý Điện Tử</span>
+              <span className="text-slate-400 font-bold text-[10px] uppercase tracking-[0.3em]">Ghi Chú Điện Tử</span>
             </div>
           </div>
 
@@ -123,7 +123,7 @@ export default function LoginPage() {
                 onClick={() => handleAuth('signup')} disabled={loading}
                 className="w-full bg-white/5 text-slate-500 border border-white/5 hover:bg-white/10 hover:text-white h-[50px] rounded-[1.5rem] font-bold text-[10px] uppercase tracking-[0.2em] transition-all active:scale-95 flex items-center justify-center gap-2"
               >
-                <UserPlus size={14} /> Ghi danh mới
+                <UserPlus size={14} /> Tạo Tài Khoản Mới
               </button>
             </div>
           </div>
