@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 15, 23, 42;
+  --background-start-rgb: 252, 252, 253;
+  --background-end-rgb: 241, 245, 249;
+  /* Thêm biến màu chủ đạo để dễ quản lý */
+  --primary-indigo: 99, 102, 241; 
+}
+
+/* Reset toàn bộ để app mượt như một ứng dụng Native */
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent; /* Xóa cái bóng xanh khi chạm vào nút trên Mobile */
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-start-rgb));
+  min-height: 100dvh; /* Sử dụng dynamic viewport height */
+  overflow: hidden; /* Chặn cuộn cả body để dùng scroll nội bộ của Layout */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Ẩn thanh cuộn nhưng vẫn cho phép vuốt */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Hiệu ứng kính mờ cao cấp */
+  .glass-card {
+    @apply backdrop-blur-3xl bg-white/60 border border-white/40 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)];
+  }
+
+  /* Animation cho các đốm màu ở Dashboard */
+  .animate-blob {
+    animation: blob 10s infinite;
+  }
+}
+
+@keyframes blob {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+
+/* Custom Input cho Mobile (Mắt Kính Sài Gòn Style) */
+input, select, textarea {
+  @apply outline-none transition-all;
+  font-size: 16px !important; /* Fix lỗi iOS tự động zoom khi click vào input */
+}
+
+input[type="date"] {
+  position: relative;
+  appearance: none;
+  -webkit-appearance: none;
+  min-height: 1.5em;
+}
+
+/* Xóa mấy cái nút tăng giảm số cho chuyên nghiệp */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Tùy chỉnh vùng chọn văn bản */
+::selection {
+  background: rgba(var(--primary-indigo), 0.2);
+  color: rgb(var(--foreground-rgb));
+}
