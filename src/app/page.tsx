@@ -231,7 +231,7 @@ export default function Dashboard() {
         <div className="flex items-center justify-between bg-slate-900/5 px-4 py-2 rounded-full border border-slate-100">
           <div className="flex items-center gap-2">
             <div className="w-2 h-2 rounded-full animate-blink"></div>
-            <p className="text-[12px] font-mono text-slate-400 uppercase tracking-tighter">Dữ Liệu mã Hóa Theo Thời Gian Thực</p>
+            <p className="text-[15px] font-mono text-slate-400 uppercase tracking-tighter">Dữ Liệu mã Hóa</p>
           </div>
           <span className="text-[12px] font-black text-indigo-500">SECURE</span>
         </div>
@@ -322,11 +322,11 @@ export default function Dashboard() {
           <div className="space-y-6">
             <div className="bg-indigo-600 rounded-[2.5rem] p-8 text-white flex justify-between items-center shadow-xl relative overflow-hidden">
                <div className="z-10">
-                 <p className="text-[8px] font-black opacity-60 mb-1 tracking-widest">HỌ NỢ MÌNH</p>
+                 <p className="text-[8px] font-black opacity-60 mb-1 tracking-widest">HỌ THIẾU</p>
                  <p className="text-xl font-black">{debts.filter(d => d.type === 'lend' && d.status === 'pending').reduce((s, d) => s + Number(d.amount), 0).toLocaleString()}đ</p>
                </div>
                <div className="text-right z-10">
-                 <p className="text-[8px] font-black opacity-60 mb-1 tracking-widest">MÌNH NỢ HỌ</p>
+                 <p className="text-[8px] font-black opacity-60 mb-1 tracking-widest">MÌNH THIẾU</p>
                  <p className="text-xl font-black text-indigo-200">{debts.filter(d => d.type === 'borrow' && d.status === 'pending').reduce((s, d) => s + Number(d.amount), 0).toLocaleString()}đ</p>
                </div>
                <div className="absolute top-0 right-0 w-24 h-24 bg-white/5 rounded-full -mr-10 -mt-10 blur-2xl"></div>
@@ -404,13 +404,13 @@ export default function Dashboard() {
         </div>
       )}
 
-      <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-[60] w-full max-w-md px-6">
+      <div className="fixed bottom-12 left-1/2 -translate-x-1/2 z-[60] w-fit max-w-md px-6">
         <button 
           onClick={() => router.push(activeView === 'finance' ? '/transactions' : '/debts/add')} 
-          className="w-full bg-slate-900 text-white py-5 rounded-2xl shadow-2xl flex items-center justify-center gap-3 active:scale-95 transition-all hover:bg-indigo-600"
+          className="w-fit bg-slate-900 text-white py-3 rounded-2xl shadow-2xl flex items-center justify-center gap-3 active:scale-95 transition-all hover:bg-indigo-600"
         >
           <Plus size={20} strokeWidth={3} />
-          <span className="text-[10px] font-black uppercase tracking-[0.2em]">Thêm mới giao dịch</span>
+          <span className="text-[12px] font-black uppercase tracking-[0.2em]">Thêm mới giao dịch</span>
         </button>
       </div>
     </main>

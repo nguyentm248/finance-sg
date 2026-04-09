@@ -96,10 +96,10 @@ export default function AddDebtPage() {
             {/* Tên đối tượng */}
             <div className="space-y-2">
               <label className="flex items-center gap-2 text-[9px] font-black text-slate-400 uppercase tracking-[0.2em] px-2">
-                <User size={13} className={type === 'lend' ? 'text-indigo-500' : 'text-rose-500'} /> Tên đối tác
+                <User size={13} className={type === 'lend' ? 'text-indigo-500' : 'text-rose-500'} /> Tên người mượn
               </label>
               <input 
-                type="text" placeholder="Nhập tên..." 
+                type="text" placeholder="Nhập tên ..." 
                 className="w-full bg-slate-50 border border-slate-100 rounded-[1.3rem] p-4 outline-none focus:bg-white text-sm font-bold transition-all placeholder:text-slate-300 shadow-inner"
                 value={personName} onChange={(e) => setPersonName(e.target.value)}
               />
@@ -108,7 +108,7 @@ export default function AddDebtPage() {
             {/* Số tiền */}
             <div className="space-y-2">
               <label className="flex items-center gap-2 text-[9px] font-black text-slate-400 uppercase tracking-[0.2em] px-2">
-                <DollarSign size={13} className="text-emerald-500" /> Số tiền giao ước
+                <DollarSign size={13} className="text-emerald-500" /> Số tiền cho mượn
               </label>
               <div className="relative">
                 <input 
@@ -124,7 +124,7 @@ export default function AddDebtPage() {
             <div className="grid grid-cols-1 gap-5">
               <div className="space-y-2">
                 <label className="flex items-center gap-2 text-[9px] font-black text-slate-400 uppercase tracking-[0.2em] px-2">
-                  <Calendar size={13} className="text-orange-500" /> Hạn thanh khoản
+                  <Calendar size={13} className="text-orange-500" /> Ngày Cho Mượn
                 </label>
                 <input 
                   type="date" 
@@ -135,7 +135,7 @@ export default function AddDebtPage() {
 
               <div className="space-y-2">
                 <label className="flex items-center gap-2 text-[9px] font-black text-slate-400 uppercase tracking-[0.2em] px-2">
-                  <MessageSquare size={13} className="text-blue-500" /> Lời nhắn nhủ
+                  <MessageSquare size={13} className="text-blue-500" /> Ghi Chú Nội Dung
                 </label>
                 <textarea 
                   placeholder="Ghi chú tại đây..." 
@@ -149,27 +149,28 @@ export default function AddDebtPage() {
 
         {/* Footer info */}
         <p className="text-center text-slate-300 text-[8px] font-black uppercase tracking-[0.4em]">
-          Mắt Kính Sài Gòn • Finance Management
+          Mắt Kính Sài Gòn • Hệ Thống Quản Lý Tài Chính
         </p>
       </div>
 
-      {/* NÚT LƯU CỐ ĐỊNH (STICKY BUTTON) - Giải quyết triệt để trên Mobile */}
-      <div className="fixed bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-[#f8fafc] via-[#f8fafc] to-transparent z-50">
-        <div className="max-w-md mx-auto space-y-3">
-          <button 
-            onClick={handleSave} disabled={loading}
-            className="w-full h-[65px] bg-slate-900 text-white rounded-[2rem] font-black text-[10px] uppercase tracking-[0.3em] shadow-[0_15px_30px_-5px_rgba(15,23,42,0.3)] active:scale-95 transition-all flex items-center justify-center gap-3 relative overflow-hidden group"
-          >
-            {loading ? (
-              <Loader2 className="animate-spin" size={20} />
-            ) : (
-              <>
-                <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <Sparkles size={16} className="relative z-10 text-yellow-300 fill-yellow-300" />
-                <span className="relative z-10">Lưu vào sổ nợ</span>
-              </>
-            )}
-          </button>
+     {/* NÚT LƯU CỐ ĐỊNH (STICKY BUTTON) */}
+<div className="fixed bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-[#f8fafc] via-[#f8fafc] to-transparent z-50">
+  <div className="w-full flex justify-center"> {/* Ép khung này rộng hết cỡ và căn giữa con */}
+    <button 
+      onClick={handleSave} 
+      disabled={loading}
+      className="mx-auto w-fit px-8 h-[65px] bg-slate-900 text-white rounded-[2rem] font-black text-[12px] uppercase tracking-[0.3em] shadow-[0_15px_30px_-5px_rgba(15,23,42,0.3)] active:scale-95 transition-all flex items-center justify-center gap-4 relative overflow-hidden group"
+    >
+      {loading ? (
+        <Loader2 className="animate-spin" size={20} />
+      ) : (
+        <>
+          <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <Sparkles size={16} className="relative z-10 text-yellow-300 fill-yellow-300" />
+          <span className="relative z-10">Lưu vào sổ nợ</span>
+        </>
+      )}
+    </button>
           
           <div className="flex items-center justify-center gap-2 opacity-40">
             <Info size={10} className="text-slate-400" />

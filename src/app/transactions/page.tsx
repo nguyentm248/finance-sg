@@ -56,7 +56,7 @@ export default function Transactions() {
           </button>
           <div className="text-right">
             <h2 className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-1">Giao dịch mới</h2>
-            <p className="text-xl font-black text-slate-800 italic uppercase leading-none">Tạo lệnh</p>
+            <p className="text-xl font-black text-slate-800 italic uppercase leading-none">Tạo Ghi Chú</p>
           </div>
         </div>
 
@@ -111,7 +111,7 @@ export default function Transactions() {
                 value={note} 
                 onChange={(e) => setNote(e.target.value)}
                 className="w-full bg-white/50 border border-slate-100 p-6 rounded-[2.5rem] outline-none focus:ring-4 focus:ring-indigo-500/5 transition-all text-sm font-bold text-slate-700 shadow-inner placeholder:text-slate-200 resize-none"
-                placeholder="Mày tiêu cái gì thế?"
+                placeholder="Bạn chi tiêu cái gì thế?"
               />
             </div>
 
@@ -126,7 +126,7 @@ export default function Transactions() {
               ) : (
                 <>
                   <Check size={22} strokeWidth={4} /> 
-                  <span>Lưu giao dịch</span>
+                  <span>Lưu dữ liệu</span>
                 </>
               )}
             </button>
