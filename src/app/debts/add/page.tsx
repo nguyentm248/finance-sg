@@ -159,7 +159,7 @@ export default function AddDebtPage() {
     <button 
       onClick={handleSave} 
       disabled={loading}
-      className="mx-auto w-fit px-8 h-[65px] bg-slate-900 text-white rounded-[2rem] font-black text-[12px] uppercase tracking-[0.3em] shadow-[0_15px_30px_-5px_rgba(15,23,42,0.3)] active:scale-95 transition-all flex items-center justify-center gap-4 relative overflow-hidden group"
+      className="mx-auto w-auto px-8 h-[65px] bg-slate-900 text-white rounded-[2rem] font-black text-[12px] uppercase tracking-[0.3em] shadow-[0_15px_30px_-5px_rgba(15,23,42,0.3)] active:scale-95 transition-all flex items-center justify-center gap-4 relative overflow-hidden group"
     >
       {loading ? (
         <Loader2 className="animate-spin" size={20} />

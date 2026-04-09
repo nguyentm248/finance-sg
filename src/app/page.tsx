@@ -410,7 +410,7 @@ export default function Dashboard() {
           className="w-fit bg-slate-900 text-white py-3 rounded-2xl shadow-2xl flex items-center justify-center gap-3 active:scale-95 transition-all hover:bg-indigo-600"
         >
           <Plus size={20} strokeWidth={3} />
-          <span className="text-[12px] font-black uppercase tracking-[0.2em]">Thêm mới giao dịch</span>
+          <span className="text-[10px] font-black uppercase tracking-[0.2em]">Thêm mới giao dịch</span>
         </button>
       </div>
     </main>
